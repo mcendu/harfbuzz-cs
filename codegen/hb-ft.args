@@ -1,0 +1,8 @@
+--file
+harfbuzz/hb-ft.h
+--methodClassName
+HbFt
+--prefixStrip
+hb_ft_
+--remap
+FT_Face=nint
