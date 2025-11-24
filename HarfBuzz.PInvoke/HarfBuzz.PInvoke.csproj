@@ -7,4 +7,19 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>McEndu.HarfBuzz.PInvoke</PackageId>
+    <Authors>mcendu</Authors>
+    <Title>HarfBuzz.PInvoke</Title>
+    <Description>Low-level HarfBuzz P/Invoke bindings</Description>
+    <PackageLicenseUrl>
+      https://raw.githubusercontent.com/mcendu/harfbuzz-cs/master/LICENSE
+    </PackageLicenseUrl>
+    <PackageProjectUrl>
+      https://github.com/mcendu/harfbuzz-cs
+    </PackageProjectUrl>
+    <PackageTags>harfbuzz text shaping binding</PackageTags>
+    <PackageVersion>11.5.1</PackageVersion>
+  </PropertyGroup>
+
 </Project>
