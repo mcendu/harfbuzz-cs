@@ -1,0 +1,7 @@
+--file
+harfbuzz/hb-subset.h
+--methodClassName
+HbSubset
+--remap
+hb_subset_input_t*=nint
+hb_subset_plan_t*=nint
