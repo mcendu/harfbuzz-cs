@@ -1,0 +1,17 @@
+--traverse
+/usr/include/harfbuzz/hb-ot-color.h
+/usr/include/harfbuzz/hb-ot-name.h
+/usr/include/harfbuzz/hb-ot-deprecated.h
+/usr/include/harfbuzz/hb-ot-font.h
+/usr/include/harfbuzz/hb-ot-layout.h
+/usr/include/harfbuzz/hb-ot-math.h
+/usr/include/harfbuzz/hb-ot-meta.h
+/usr/include/harfbuzz/hb-ot-metrics.h
+/usr/include/harfbuzz/hb-ot-shape.h
+/usr/include/harfbuzz/hb-ot-var.h
+--file
+harfbuzz/hb-ot.h
+--methodClassName
+HbOt
+--prefixStrip
+hb_ot_
