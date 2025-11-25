@@ -13,5 +13,3 @@
 harfbuzz/hb-ot.h
 --methodClassName
 HbOt
---prefixStrip
-hb_ot_

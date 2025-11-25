@@ -28,392 +28,392 @@ namespace HarfBuzz.PInvoke
 {
     public static unsafe partial class HbOt
     {
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_name_list_names", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("const hb_ot_name_entry_t *")]
-        public static extern hb_ot_name_entry_t* name_list_names([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int *")] uint* num_entries);
+        public static extern hb_ot_name_entry_t* hb_ot_name_list_names([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int *")] uint* num_entries);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_name_get_utf8", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint name_get_utf8([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_ot_name_id_t")] uint name_id, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* text_size, [NativeTypeName("char *")] byte* text);
+        public static extern uint hb_ot_name_get_utf8([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_ot_name_id_t")] uint name_id, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* text_size, [NativeTypeName("char *")] byte* text);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_name_get_utf16", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint name_get_utf16([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_ot_name_id_t")] uint name_id, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* text_size, [NativeTypeName("uint16_t *")] ushort* text);
+        public static extern uint hb_ot_name_get_utf16([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_ot_name_id_t")] uint name_id, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* text_size, [NativeTypeName("uint16_t *")] ushort* text);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_name_get_utf32", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint name_get_utf32([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_ot_name_id_t")] uint name_id, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* text_size, [NativeTypeName("uint32_t *")] uint* text);
+        public static extern uint hb_ot_name_get_utf32([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_ot_name_id_t")] uint name_id, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* text_size, [NativeTypeName("uint32_t *")] uint* text);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_has_palettes", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int color_has_palettes([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_color_has_palettes([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_palette_get_count", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint color_palette_get_count([NativeTypeName("hb_face_t*")] nint face);
+        public static extern uint hb_ot_color_palette_get_count([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_palette_get_name_id", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_ot_name_id_t")]
-        public static extern uint color_palette_get_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint palette_index);
+        public static extern uint hb_ot_color_palette_get_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint palette_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_palette_color_get_name_id", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_ot_name_id_t")]
-        public static extern uint color_palette_color_get_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint color_index);
+        public static extern uint hb_ot_color_palette_color_get_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint color_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_palette_get_flags", ExactSpelling = true)]
-        public static extern hb_ot_color_palette_flags_t color_palette_get_flags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint palette_index);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern hb_ot_color_palette_flags_t hb_ot_color_palette_get_flags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint palette_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_palette_get_colors", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint color_palette_get_colors([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint palette_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* color_count, [NativeTypeName("hb_color_t *")] uint* colors);
+        public static extern uint hb_ot_color_palette_get_colors([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint palette_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* color_count, [NativeTypeName("hb_color_t *")] uint* colors);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_has_layers", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int color_has_layers([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_color_has_layers([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_glyph_get_layers", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint color_glyph_get_layers([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* layer_count, hb_ot_color_layer_t* layers);
+        public static extern uint hb_ot_color_glyph_get_layers([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* layer_count, hb_ot_color_layer_t* layers);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_has_paint", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int color_has_paint([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_color_has_paint([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_glyph_has_paint", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int color_glyph_has_paint([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern int hb_ot_color_glyph_has_paint([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_has_svg", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int color_has_svg([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_color_has_svg([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_glyph_reference_svg", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_blob_t*")]
-        public static extern nint color_glyph_reference_svg([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern nint hb_ot_color_glyph_reference_svg([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_has_png", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int color_has_png([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_color_has_png([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_color_glyph_reference_png", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_blob_t*")]
-        public static extern nint color_glyph_reference_png([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern nint hb_ot_color_glyph_reference_png([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_choose_script", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
         [Obsolete]
-        public static extern int layout_table_choose_script([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const hb_tag_t *")] uint* script_tags, [NativeTypeName("unsigned int *")] uint* script_index, [NativeTypeName("hb_tag_t *")] uint* chosen_script);
+        public static extern int hb_ot_layout_table_choose_script([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const hb_tag_t *")] uint* script_tags, [NativeTypeName("unsigned int *")] uint* script_index, [NativeTypeName("hb_tag_t *")] uint* chosen_script);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_script_find_language", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
         [Obsolete]
-        public static extern int layout_script_find_language([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("hb_tag_t")] uint language_tag, [NativeTypeName("unsigned int *")] uint* language_index);
+        public static extern int hb_ot_layout_script_find_language([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("hb_tag_t")] uint language_tag, [NativeTypeName("unsigned int *")] uint* language_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_tags_from_script", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [Obsolete]
-        public static extern void tags_from_script(hb_script_t script, [NativeTypeName("hb_tag_t *")] uint* script_tag_1, [NativeTypeName("hb_tag_t *")] uint* script_tag_2);
+        public static extern void hb_ot_tags_from_script(hb_script_t script, [NativeTypeName("hb_tag_t *")] uint* script_tag_1, [NativeTypeName("hb_tag_t *")] uint* script_tag_2);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_tag_from_language", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_tag_t")]
         [Obsolete]
-        public static extern uint tag_from_language([NativeTypeName("hb_language_t")] nint language);
+        public static extern uint hb_ot_tag_from_language([NativeTypeName("hb_language_t")] nint language);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_get_axes", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
         [Obsolete]
-        public static extern uint var_get_axes([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* axes_count, hb_ot_var_axis_t* axes_array);
+        public static extern uint hb_ot_var_get_axes([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* axes_count, hb_ot_var_axis_t* axes_array);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_find_axis", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
         [Obsolete]
-        public static extern int var_find_axis([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint axis_tag, [NativeTypeName("unsigned int *")] uint* axis_index, hb_ot_var_axis_t* axis_info);
+        public static extern int hb_ot_var_find_axis([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint axis_tag, [NativeTypeName("unsigned int *")] uint* axis_index, hb_ot_var_axis_t* axis_info);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_font_set_funcs", ExactSpelling = true)]
-        public static extern void font_set_funcs([NativeTypeName("hb_font_t*")] nint font);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_font_set_funcs([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_tags_from_script_and_language", ExactSpelling = true)]
-        public static extern void tags_from_script_and_language(hb_script_t script, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* script_count, [NativeTypeName("hb_tag_t *")] uint* script_tags, [NativeTypeName("unsigned int *")] uint* language_count, [NativeTypeName("hb_tag_t *")] uint* language_tags);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_tags_from_script_and_language(hb_script_t script, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("unsigned int *")] uint* script_count, [NativeTypeName("hb_tag_t *")] uint* script_tags, [NativeTypeName("unsigned int *")] uint* language_count, [NativeTypeName("hb_tag_t *")] uint* language_tags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_tag_to_script", ExactSpelling = true)]
-        public static extern hb_script_t tag_to_script([NativeTypeName("hb_tag_t")] uint tag);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern hb_script_t hb_ot_tag_to_script([NativeTypeName("hb_tag_t")] uint tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_tag_to_language", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_language_t")]
-        public static extern nint tag_to_language([NativeTypeName("hb_tag_t")] uint tag);
+        public static extern nint hb_ot_tag_to_language([NativeTypeName("hb_tag_t")] uint tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_tags_to_script_and_language", ExactSpelling = true)]
-        public static extern void tags_to_script_and_language([NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, hb_script_t* script, [NativeTypeName("hb_language_t *")] nint* language);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_tags_to_script_and_language([NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, hb_script_t* script, [NativeTypeName("hb_language_t *")] nint* language);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_has_glyph_classes", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_has_glyph_classes([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_layout_has_glyph_classes([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_glyph_class", ExactSpelling = true)]
-        public static extern hb_ot_layout_glyph_class_t layout_get_glyph_class([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern hb_ot_layout_glyph_class_t hb_ot_layout_get_glyph_class([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_glyphs_in_class", ExactSpelling = true)]
-        public static extern void layout_get_glyphs_in_class([NativeTypeName("hb_face_t*")] nint face, hb_ot_layout_glyph_class_t klass, [NativeTypeName("hb_set_t*")] nint glyphs);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_get_glyphs_in_class([NativeTypeName("hb_face_t*")] nint face, hb_ot_layout_glyph_class_t klass, [NativeTypeName("hb_set_t*")] nint glyphs);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_attach_points", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_get_attach_points([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* point_count, [NativeTypeName("unsigned int *")] uint* point_array);
+        public static extern uint hb_ot_layout_get_attach_points([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* point_count, [NativeTypeName("unsigned int *")] uint* point_array);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_ligature_carets", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_get_ligature_carets([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* caret_count, [NativeTypeName("hb_position_t *")] int* caret_array);
+        public static extern uint hb_ot_layout_get_ligature_carets([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* caret_count, [NativeTypeName("hb_position_t *")] int* caret_array);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_get_script_tags", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_table_get_script_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* script_count, [NativeTypeName("hb_tag_t *")] uint* script_tags);
+        public static extern uint hb_ot_layout_table_get_script_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* script_count, [NativeTypeName("hb_tag_t *")] uint* script_tags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_find_script", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_table_find_script([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("unsigned int *")] uint* script_index);
+        public static extern int hb_ot_layout_table_find_script([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("unsigned int *")] uint* script_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_select_script", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_table_select_script([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_count, [NativeTypeName("const hb_tag_t *")] uint* script_tags, [NativeTypeName("unsigned int *")] uint* script_index, [NativeTypeName("hb_tag_t *")] uint* chosen_script);
+        public static extern int hb_ot_layout_table_select_script([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_count, [NativeTypeName("const hb_tag_t *")] uint* script_tags, [NativeTypeName("unsigned int *")] uint* script_index, [NativeTypeName("hb_tag_t *")] uint* chosen_script);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_get_feature_tags", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_table_get_feature_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* feature_count, [NativeTypeName("hb_tag_t *")] uint* feature_tags);
+        public static extern uint hb_ot_layout_table_get_feature_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* feature_count, [NativeTypeName("hb_tag_t *")] uint* feature_tags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_script_get_language_tags", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_script_get_language_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* language_count, [NativeTypeName("hb_tag_t *")] uint* language_tags);
+        public static extern uint hb_ot_layout_script_get_language_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* language_count, [NativeTypeName("hb_tag_t *")] uint* language_tags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_script_select_language", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_script_select_language([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_count, [NativeTypeName("const hb_tag_t *")] uint* language_tags, [NativeTypeName("unsigned int *")] uint* language_index);
+        public static extern int hb_ot_layout_script_select_language([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_count, [NativeTypeName("const hb_tag_t *")] uint* language_tags, [NativeTypeName("unsigned int *")] uint* language_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_script_select_language2", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_script_select_language2([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_count, [NativeTypeName("const hb_tag_t *")] uint* language_tags, [NativeTypeName("unsigned int *")] uint* language_index, [NativeTypeName("hb_tag_t *")] uint* chosen_language);
+        public static extern int hb_ot_layout_script_select_language2([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_count, [NativeTypeName("const hb_tag_t *")] uint* language_tags, [NativeTypeName("unsigned int *")] uint* language_index, [NativeTypeName("hb_tag_t *")] uint* chosen_language);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_language_get_required_feature_index", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_language_get_required_feature_index([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int *")] uint* feature_index);
+        public static extern int hb_ot_layout_language_get_required_feature_index([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int *")] uint* feature_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_language_get_required_feature", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_language_get_required_feature([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int *")] uint* feature_index, [NativeTypeName("hb_tag_t *")] uint* feature_tag);
+        public static extern int hb_ot_layout_language_get_required_feature([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int *")] uint* feature_index, [NativeTypeName("hb_tag_t *")] uint* feature_tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_language_get_feature_indexes", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_language_get_feature_indexes([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* feature_count, [NativeTypeName("unsigned int *")] uint* feature_indexes);
+        public static extern uint hb_ot_layout_language_get_feature_indexes([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* feature_count, [NativeTypeName("unsigned int *")] uint* feature_indexes);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_language_get_feature_tags", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_language_get_feature_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* feature_count, [NativeTypeName("hb_tag_t *")] uint* feature_tags);
+        public static extern uint hb_ot_layout_language_get_feature_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* feature_count, [NativeTypeName("hb_tag_t *")] uint* feature_tags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_language_find_feature", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_language_find_feature([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("hb_tag_t")] uint feature_tag, [NativeTypeName("unsigned int *")] uint* feature_index);
+        public static extern int hb_ot_layout_language_find_feature([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("hb_tag_t")] uint feature_tag, [NativeTypeName("unsigned int *")] uint* feature_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_feature_get_lookups", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_feature_get_lookups([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* lookup_count, [NativeTypeName("unsigned int *")] uint* lookup_indexes);
+        public static extern uint hb_ot_layout_feature_get_lookups([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* lookup_count, [NativeTypeName("unsigned int *")] uint* lookup_indexes);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_get_lookup_count", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_table_get_lookup_count([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag);
+        public static extern uint hb_ot_layout_table_get_lookup_count([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_collect_features", ExactSpelling = true)]
-        public static extern void layout_collect_features([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const hb_tag_t *")] uint* scripts, [NativeTypeName("const hb_tag_t *")] uint* languages, [NativeTypeName("const hb_tag_t *")] uint* features, [NativeTypeName("hb_set_t*")] nint feature_indexes);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_collect_features([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const hb_tag_t *")] uint* scripts, [NativeTypeName("const hb_tag_t *")] uint* languages, [NativeTypeName("const hb_tag_t *")] uint* features, [NativeTypeName("hb_set_t*")] nint feature_indexes);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_collect_features_map", ExactSpelling = true)]
-        public static extern void layout_collect_features_map([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("hb_map_t*")] nint feature_map);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_collect_features_map([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint script_index, [NativeTypeName("unsigned int")] uint language_index, [NativeTypeName("hb_map_t*")] nint feature_map);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_collect_lookups", ExactSpelling = true)]
-        public static extern void layout_collect_lookups([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const hb_tag_t *")] uint* scripts, [NativeTypeName("const hb_tag_t *")] uint* languages, [NativeTypeName("const hb_tag_t *")] uint* features, [NativeTypeName("hb_set_t*")] nint lookup_indexes);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_collect_lookups([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const hb_tag_t *")] uint* scripts, [NativeTypeName("const hb_tag_t *")] uint* languages, [NativeTypeName("const hb_tag_t *")] uint* features, [NativeTypeName("hb_set_t*")] nint lookup_indexes);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_lookup_collect_glyphs", ExactSpelling = true)]
-        public static extern void layout_lookup_collect_glyphs([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("hb_set_t*")] nint glyphs_before, [NativeTypeName("hb_set_t*")] nint glyphs_input, [NativeTypeName("hb_set_t*")] nint glyphs_after, [NativeTypeName("hb_set_t*")] nint glyphs_output);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_lookup_collect_glyphs([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("hb_set_t*")] nint glyphs_before, [NativeTypeName("hb_set_t*")] nint glyphs_input, [NativeTypeName("hb_set_t*")] nint glyphs_after, [NativeTypeName("hb_set_t*")] nint glyphs_output);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_table_find_feature_variations", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_table_find_feature_variations([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const int *")] int* coords, [NativeTypeName("unsigned int")] uint num_coords, [NativeTypeName("unsigned int *")] uint* variations_index);
+        public static extern int hb_ot_layout_table_find_feature_variations([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("const int *")] int* coords, [NativeTypeName("unsigned int")] uint num_coords, [NativeTypeName("unsigned int *")] uint* variations_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_feature_with_variations_get_lookups", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_feature_with_variations_get_lookups([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("unsigned int")] uint variations_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* lookup_count, [NativeTypeName("unsigned int *")] uint* lookup_indexes);
+        public static extern uint hb_ot_layout_feature_with_variations_get_lookups([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("unsigned int")] uint variations_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* lookup_count, [NativeTypeName("unsigned int *")] uint* lookup_indexes);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_has_substitution", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_has_substitution([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_layout_has_substitution([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_lookup_get_glyph_alternates", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_lookup_get_glyph_alternates([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* alternate_count, [NativeTypeName("hb_codepoint_t *")] uint* alternate_glyphs);
+        public static extern uint hb_ot_layout_lookup_get_glyph_alternates([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("hb_codepoint_t")] uint glyph, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* alternate_count, [NativeTypeName("hb_codepoint_t *")] uint* alternate_glyphs);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_lookup_would_substitute", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_lookup_would_substitute([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("const hb_codepoint_t *")] uint* glyphs, [NativeTypeName("unsigned int")] uint glyphs_length, [NativeTypeName("hb_bool_t")] int zero_context);
+        public static extern int hb_ot_layout_lookup_would_substitute([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("const hb_codepoint_t *")] uint* glyphs, [NativeTypeName("unsigned int")] uint glyphs_length, [NativeTypeName("hb_bool_t")] int zero_context);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_lookup_substitute_closure", ExactSpelling = true)]
-        public static extern void layout_lookup_substitute_closure([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("hb_set_t*")] nint glyphs);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_lookup_substitute_closure([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint lookup_index, [NativeTypeName("hb_set_t*")] nint glyphs);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_lookups_substitute_closure", ExactSpelling = true)]
-        public static extern void layout_lookups_substitute_closure([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("const hb_set_t *")] nint lookups, [NativeTypeName("hb_set_t*")] nint glyphs);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_lookups_substitute_closure([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("const hb_set_t *")] nint lookups, [NativeTypeName("hb_set_t*")] nint glyphs);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_has_positioning", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_has_positioning([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_layout_has_positioning([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_size_params", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_get_size_params([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int *")] uint* design_size, [NativeTypeName("unsigned int *")] uint* subfamily_id, [NativeTypeName("hb_ot_name_id_t *")] uint* subfamily_name_id, [NativeTypeName("unsigned int *")] uint* range_start, [NativeTypeName("unsigned int *")] uint* range_end);
+        public static extern int hb_ot_layout_get_size_params([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int *")] uint* design_size, [NativeTypeName("unsigned int *")] uint* subfamily_id, [NativeTypeName("hb_ot_name_id_t *")] uint* subfamily_name_id, [NativeTypeName("unsigned int *")] uint* range_start, [NativeTypeName("unsigned int *")] uint* range_end);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_lookup_get_optical_bound", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int layout_lookup_get_optical_bound([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("unsigned int")] uint lookup_index, hb_direction_t direction, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern int hb_ot_layout_lookup_get_optical_bound([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("unsigned int")] uint lookup_index, hb_direction_t direction, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_feature_get_name_ids", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_feature_get_name_ids([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("hb_ot_name_id_t *")] uint* label_id, [NativeTypeName("hb_ot_name_id_t *")] uint* tooltip_id, [NativeTypeName("hb_ot_name_id_t *")] uint* sample_id, [NativeTypeName("unsigned int *")] uint* num_named_parameters, [NativeTypeName("hb_ot_name_id_t *")] uint* first_param_id);
+        public static extern int hb_ot_layout_feature_get_name_ids([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("hb_ot_name_id_t *")] uint* label_id, [NativeTypeName("hb_ot_name_id_t *")] uint* tooltip_id, [NativeTypeName("hb_ot_name_id_t *")] uint* sample_id, [NativeTypeName("unsigned int *")] uint* num_named_parameters, [NativeTypeName("hb_ot_name_id_t *")] uint* first_param_id);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_feature_get_characters", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint layout_feature_get_characters([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* char_count, [NativeTypeName("hb_codepoint_t *")] uint* characters);
+        public static extern uint hb_ot_layout_feature_get_characters([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("unsigned int")] uint feature_index, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* char_count, [NativeTypeName("hb_codepoint_t *")] uint* characters);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_font_extents", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_get_font_extents([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, hb_font_extents_t* extents);
+        public static extern int hb_ot_layout_get_font_extents([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, hb_font_extents_t* extents);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_font_extents2", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_get_font_extents2([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction, hb_script_t script, [NativeTypeName("hb_language_t")] nint language, hb_font_extents_t* extents);
+        public static extern int hb_ot_layout_get_font_extents2([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction, hb_script_t script, [NativeTypeName("hb_language_t")] nint language, hb_font_extents_t* extents);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_horizontal_baseline_tag_for_script", ExactSpelling = true)]
-        public static extern hb_ot_layout_baseline_tag_t layout_get_horizontal_baseline_tag_for_script(hb_script_t script);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern hb_ot_layout_baseline_tag_t hb_ot_layout_get_horizontal_baseline_tag_for_script(hb_script_t script);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_baseline", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_get_baseline([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, [NativeTypeName("hb_position_t *")] int* coord);
+        public static extern int hb_ot_layout_get_baseline([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, [NativeTypeName("hb_position_t *")] int* coord);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_baseline2", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int layout_get_baseline2([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, hb_script_t script, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("hb_position_t *")] int* coord);
+        public static extern int hb_ot_layout_get_baseline2([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, hb_script_t script, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("hb_position_t *")] int* coord);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_baseline_with_fallback", ExactSpelling = true)]
-        public static extern void layout_get_baseline_with_fallback([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, [NativeTypeName("hb_position_t *")] int* coord);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_get_baseline_with_fallback([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, [NativeTypeName("hb_tag_t")] uint script_tag, [NativeTypeName("hb_tag_t")] uint language_tag, [NativeTypeName("hb_position_t *")] int* coord);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_layout_get_baseline_with_fallback2", ExactSpelling = true)]
-        public static extern void layout_get_baseline_with_fallback2([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, hb_script_t script, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("hb_position_t *")] int* coord);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_layout_get_baseline_with_fallback2([NativeTypeName("hb_font_t*")] nint font, hb_ot_layout_baseline_tag_t baseline_tag, hb_direction_t direction, hb_script_t script, [NativeTypeName("hb_language_t")] nint language, [NativeTypeName("hb_position_t *")] int* coord);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_has_data", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int math_has_data([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_math_has_data([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_constant", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int math_get_constant([NativeTypeName("hb_font_t*")] nint font, hb_ot_math_constant_t constant);
+        public static extern int hb_ot_math_get_constant([NativeTypeName("hb_font_t*")] nint font, hb_ot_math_constant_t constant);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_glyph_italics_correction", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int math_get_glyph_italics_correction([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern int hb_ot_math_get_glyph_italics_correction([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_glyph_top_accent_attachment", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int math_get_glyph_top_accent_attachment([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern int hb_ot_math_get_glyph_top_accent_attachment([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_is_glyph_extended_shape", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int math_is_glyph_extended_shape([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
+        public static extern int hb_ot_math_is_glyph_extended_shape([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_codepoint_t")] uint glyph);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_glyph_kerning", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int math_get_glyph_kerning([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_ot_math_kern_t kern, [NativeTypeName("hb_position_t")] int correction_height);
+        public static extern int hb_ot_math_get_glyph_kerning([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_ot_math_kern_t kern, [NativeTypeName("hb_position_t")] int correction_height);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_glyph_kernings", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint math_get_glyph_kernings([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_ot_math_kern_t kern, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* entries_count, hb_ot_math_kern_entry_t* kern_entries);
+        public static extern uint hb_ot_math_get_glyph_kernings([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_ot_math_kern_t kern, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* entries_count, hb_ot_math_kern_entry_t* kern_entries);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_glyph_variants", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint math_get_glyph_variants([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_direction_t direction, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* variants_count, hb_ot_math_glyph_variant_t* variants);
+        public static extern uint hb_ot_math_get_glyph_variants([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_direction_t direction, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* variants_count, hb_ot_math_glyph_variant_t* variants);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_min_connector_overlap", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int math_get_min_connector_overlap([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction);
+        public static extern int hb_ot_math_get_min_connector_overlap([NativeTypeName("hb_font_t*")] nint font, hb_direction_t direction);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_math_get_glyph_assembly", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint math_get_glyph_assembly([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_direction_t direction, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* parts_count, hb_ot_math_glyph_part_t* parts, [NativeTypeName("hb_position_t *")] int* italics_correction);
+        public static extern uint hb_ot_math_get_glyph_assembly([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_codepoint_t")] uint glyph, hb_direction_t direction, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* parts_count, hb_ot_math_glyph_part_t* parts, [NativeTypeName("hb_position_t *")] int* italics_correction);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_meta_get_entry_tags", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint meta_get_entry_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* entries_count, hb_ot_meta_tag_t* entries);
+        public static extern uint hb_ot_meta_get_entry_tags([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* entries_count, hb_ot_meta_tag_t* entries);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_meta_reference_entry", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_blob_t*")]
-        public static extern nint meta_reference_entry([NativeTypeName("hb_face_t*")] nint face, hb_ot_meta_tag_t meta_tag);
+        public static extern nint hb_ot_meta_reference_entry([NativeTypeName("hb_face_t*")] nint face, hb_ot_meta_tag_t meta_tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_metrics_get_position", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int metrics_get_position([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag, [NativeTypeName("hb_position_t *")] int* position);
+        public static extern int hb_ot_metrics_get_position([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag, [NativeTypeName("hb_position_t *")] int* position);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_metrics_get_position_with_fallback", ExactSpelling = true)]
-        public static extern void metrics_get_position_with_fallback([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag, [NativeTypeName("hb_position_t *")] int* position);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_metrics_get_position_with_fallback([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag, [NativeTypeName("hb_position_t *")] int* position);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_metrics_get_variation", ExactSpelling = true)]
-        public static extern float metrics_get_variation([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern float hb_ot_metrics_get_variation([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_metrics_get_x_variation", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int metrics_get_x_variation([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag);
+        public static extern int hb_ot_metrics_get_x_variation([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_metrics_get_y_variation", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_position_t")]
-        public static extern int metrics_get_y_variation([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag);
+        public static extern int hb_ot_metrics_get_y_variation([NativeTypeName("hb_font_t*")] nint font, hb_ot_metrics_tag_t metrics_tag);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_shape_glyphs_closure", ExactSpelling = true)]
-        public static extern void shape_glyphs_closure([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_buffer_t*")] nint buffer, [NativeTypeName("const hb_feature_t *")] hb_feature_t* features, [NativeTypeName("unsigned int")] uint num_features, [NativeTypeName("hb_set_t*")] nint glyphs);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_shape_glyphs_closure([NativeTypeName("hb_font_t*")] nint font, [NativeTypeName("hb_buffer_t*")] nint buffer, [NativeTypeName("const hb_feature_t *")] hb_feature_t* features, [NativeTypeName("unsigned int")] uint num_features, [NativeTypeName("hb_set_t*")] nint glyphs);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_shape_plan_collect_lookups", ExactSpelling = true)]
-        public static extern void shape_plan_collect_lookups([NativeTypeName("hb_shape_plan_t*")] nint shape_plan, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("hb_set_t*")] nint lookup_indexes);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_shape_plan_collect_lookups([NativeTypeName("hb_shape_plan_t*")] nint shape_plan, [NativeTypeName("hb_tag_t")] uint table_tag, [NativeTypeName("hb_set_t*")] nint lookup_indexes);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_shape_plan_get_feature_tags", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint shape_plan_get_feature_tags([NativeTypeName("hb_shape_plan_t*")] nint shape_plan, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* tag_count, [NativeTypeName("hb_tag_t *")] uint* tags);
+        public static extern uint hb_ot_shape_plan_get_feature_tags([NativeTypeName("hb_shape_plan_t*")] nint shape_plan, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* tag_count, [NativeTypeName("hb_tag_t *")] uint* tags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_has_data", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int var_has_data([NativeTypeName("hb_face_t*")] nint face);
+        public static extern int hb_ot_var_has_data([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_get_axis_count", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint var_get_axis_count([NativeTypeName("hb_face_t*")] nint face);
+        public static extern uint hb_ot_var_get_axis_count([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_get_axis_infos", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint var_get_axis_infos([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* axes_count, hb_ot_var_axis_info_t* axes_array);
+        public static extern uint hb_ot_var_get_axis_infos([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint start_offset, [NativeTypeName("unsigned int *")] uint* axes_count, hb_ot_var_axis_info_t* axes_array);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_find_axis_info", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int var_find_axis_info([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint axis_tag, hb_ot_var_axis_info_t* axis_info);
+        public static extern int hb_ot_var_find_axis_info([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("hb_tag_t")] uint axis_tag, hb_ot_var_axis_info_t* axis_info);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_get_named_instance_count", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint var_get_named_instance_count([NativeTypeName("hb_face_t*")] nint face);
+        public static extern uint hb_ot_var_get_named_instance_count([NativeTypeName("hb_face_t*")] nint face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_named_instance_get_subfamily_name_id", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_ot_name_id_t")]
-        public static extern uint var_named_instance_get_subfamily_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint instance_index);
+        public static extern uint hb_ot_var_named_instance_get_subfamily_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint instance_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_named_instance_get_postscript_name_id", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_ot_name_id_t")]
-        public static extern uint var_named_instance_get_postscript_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint instance_index);
+        public static extern uint hb_ot_var_named_instance_get_postscript_name_id([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint instance_index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_named_instance_get_design_coords", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("unsigned int")]
-        public static extern uint var_named_instance_get_design_coords([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint instance_index, [NativeTypeName("unsigned int *")] uint* coords_length, float* coords);
+        public static extern uint hb_ot_var_named_instance_get_design_coords([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint instance_index, [NativeTypeName("unsigned int *")] uint* coords_length, float* coords);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_normalize_variations", ExactSpelling = true)]
-        public static extern void var_normalize_variations([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("const hb_variation_t *")] hb_variation_t* variations, [NativeTypeName("unsigned int")] uint variations_length, int* coords, [NativeTypeName("unsigned int")] uint coords_length);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_var_normalize_variations([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("const hb_variation_t *")] hb_variation_t* variations, [NativeTypeName("unsigned int")] uint variations_length, int* coords, [NativeTypeName("unsigned int")] uint coords_length);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ot_var_normalize_coords", ExactSpelling = true)]
-        public static extern void var_normalize_coords([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint coords_length, [NativeTypeName("const float *")] float* design_coords, int* normalized_coords);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ot_var_normalize_coords([NativeTypeName("hb_face_t*")] nint face, [NativeTypeName("unsigned int")] uint coords_length, [NativeTypeName("const float *")] float* design_coords, int* normalized_coords);
 
         [NativeTypeName("#define HB_MATH_GLYPH_PART_FLAG_EXTENDER HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER")]
         public const hb_ot_math_glyph_part_flags_t HB_MATH_GLYPH_PART_FLAG_EXTENDER = HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER;

@@ -27,64 +27,64 @@ namespace HarfBuzz.PInvoke
 {
     public static unsafe partial class HbFt
     {
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_face_create", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_face_t*")]
-        public static extern nint face_create([NativeTypeName("FT_Face")] nint ft_face, [NativeTypeName("hb_destroy_func_t")] delegate* unmanaged[Cdecl]<void*, void> destroy);
+        public static extern nint hb_ft_face_create([NativeTypeName("FT_Face")] nint ft_face, [NativeTypeName("hb_destroy_func_t")] delegate* unmanaged[Cdecl]<void*, void> destroy);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_face_create_cached", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_face_t*")]
-        public static extern nint face_create_cached([NativeTypeName("FT_Face")] nint ft_face);
+        public static extern nint hb_ft_face_create_cached([NativeTypeName("FT_Face")] nint ft_face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_face_create_referenced", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_face_t*")]
-        public static extern nint face_create_referenced([NativeTypeName("FT_Face")] nint ft_face);
+        public static extern nint hb_ft_face_create_referenced([NativeTypeName("FT_Face")] nint ft_face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_face_create_from_file_or_fail", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_face_t*")]
-        public static extern nint face_create_from_file_or_fail([NativeTypeName("const char *")] byte* file_name, [NativeTypeName("unsigned int")] uint index);
+        public static extern nint hb_ft_face_create_from_file_or_fail([NativeTypeName("const char *")] byte* file_name, [NativeTypeName("unsigned int")] uint index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_face_create_from_blob_or_fail", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_face_t*")]
-        public static extern nint face_create_from_blob_or_fail([NativeTypeName("hb_blob_t*")] nint blob, [NativeTypeName("unsigned int")] uint index);
+        public static extern nint hb_ft_face_create_from_blob_or_fail([NativeTypeName("hb_blob_t*")] nint blob, [NativeTypeName("unsigned int")] uint index);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_create", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_font_t*")]
-        public static extern nint font_create([NativeTypeName("FT_Face")] nint ft_face, [NativeTypeName("hb_destroy_func_t")] delegate* unmanaged[Cdecl]<void*, void> destroy);
+        public static extern nint hb_ft_font_create([NativeTypeName("FT_Face")] nint ft_face, [NativeTypeName("hb_destroy_func_t")] delegate* unmanaged[Cdecl]<void*, void> destroy);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_create_referenced", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_font_t*")]
-        public static extern nint font_create_referenced([NativeTypeName("FT_Face")] nint ft_face);
+        public static extern nint hb_ft_font_create_referenced([NativeTypeName("FT_Face")] nint ft_face);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_get_ft_face", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("FT_Face")]
-        public static extern nint font_get_ft_face([NativeTypeName("hb_font_t*")] nint font);
+        public static extern nint hb_ft_font_get_ft_face([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_lock_face", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("FT_Face")]
-        public static extern nint font_lock_face([NativeTypeName("hb_font_t*")] nint font);
+        public static extern nint hb_ft_font_lock_face([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_unlock_face", ExactSpelling = true)]
-        public static extern void font_unlock_face([NativeTypeName("hb_font_t*")] nint font);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ft_font_unlock_face([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_set_load_flags", ExactSpelling = true)]
-        public static extern void font_set_load_flags([NativeTypeName("hb_font_t*")] nint font, int load_flags);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ft_font_set_load_flags([NativeTypeName("hb_font_t*")] nint font, int load_flags);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_get_load_flags", ExactSpelling = true)]
-        public static extern int font_get_load_flags([NativeTypeName("hb_font_t*")] nint font);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern int hb_ft_font_get_load_flags([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_changed", ExactSpelling = true)]
-        public static extern void font_changed([NativeTypeName("hb_font_t*")] nint font);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ft_font_changed([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_hb_font_changed", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("hb_bool_t")]
-        public static extern int hb_font_changed([NativeTypeName("hb_font_t*")] nint font);
+        public static extern int hb_ft_hb_font_changed([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_set_funcs", ExactSpelling = true)]
-        public static extern void font_set_funcs([NativeTypeName("hb_font_t*")] nint font);
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+        public static extern void hb_ft_font_set_funcs([NativeTypeName("hb_font_t*")] nint font);
 
-        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, EntryPoint = "hb_ft_font_get_face", ExactSpelling = true)]
+        [DllImport("harfbuzz", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         [return: NativeTypeName("FT_Face")]
         [Obsolete]
-        public static extern nint font_get_face([NativeTypeName("hb_font_t*")] nint font);
+        public static extern nint hb_ft_font_get_face([NativeTypeName("hb_font_t*")] nint font);
     }
 }

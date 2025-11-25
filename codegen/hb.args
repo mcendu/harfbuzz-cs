@@ -19,5 +19,3 @@
 harfbuzz/hb.h
 --methodClassName
 Hb
---prefixStrip
-hb_
