@@ -32,6 +32,24 @@ All functions have the same name as the corresponding C API; refer to
 [HarfBuzz documentation][HarfBuzz] for usage. Note that you have to
 manually marshal strings to use them with this library.
 
+## APIs
+
+The following APIs are exposed:
+
+  - Hb (hb.h) &ndash; Core API
+  - HbOt (hb-ot.h) &ndash; OpenType API
+  - HbAat (hb-aat.h) &ndash; Apple Advanced Typography API
+  - HbSubset (hb-subset.h) &ndash; Subset API
+  - Integration API:
+    - HbFt (hb-ft.h) &ndash; FreeType integration
+
+`Hb.HB_VERSION_STRING` indicates the version of HarfBuzz against which
+the bindings are generated. APIs from newer versions of HarfBuzz are
+unavailable, and `EntryPointNotFoundException` will be thrown on the
+newer APIs if you ship an older HarfBuzz. The assembly version of this
+library indicates the same thing. To get the version of the actual
+underlying library, call `Hb.hb_version()`.
+
 ## Generating
 The bindings are generated using [ClangSharpPInvokeGenerator]. Run the
 following command in your clone repository to install it:
