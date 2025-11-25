@@ -6,7 +6,7 @@ bindings to [HarfBuzz].
 If you are looking for high-level, safe bindings, you should check out
 other libraries, like [HarfBuzzSharp].
 
-## Usage
+## Installing
 To add this library to your project using the .NET CLI:
 
 ```console
@@ -15,6 +15,22 @@ $ dotnet add package McEndu.HarfBuzz.PInvoke
 
 The package does not provide HarfBuzz itself; you are responsible for
 shipping the natives.
+
+## Usage
+All method bindings in this library are intended to be imported via
+`using static`. To do the equivalent of `#include <hb.h>`, for example,
+put in the top of your source file:
+
+```csharp
+// Write the following line once
+using HarfBuzz.PInvoke;
+// Write a `using static` line for each equivalent of a C header
+using static HarfBuzz.PInvoke.Hb;
+```
+
+All functions have the same name as the corresponding C API; refer to
+[HarfBuzz documentation][HarfBuzz] for usage. Note that you have to
+manually marshal strings to use them with this library.
 
 ## Generating
 The bindings are generated using [ClangSharpPInvokeGenerator]. Run the
