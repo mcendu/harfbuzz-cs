@@ -1,0 +1,36 @@
+name: Upload McEndu.HarfBuzz.PInvoke
+
+on:
+  push:
+    tags:
+      - "pinvoke-*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -c Release --no-restore
+    - name: Pack
+      run: dotnet pack -c Release
+    - name: NuGet Login
+      id: login
+      uses: NuGet/login@v1
+      with:
+        user: mcendu
+    - name: Push
+      run: |
+        dotnet nuget push HarfBuzz.PInvoke/bin/Release/McEndu.HarfBuzz.PInvoke.*.nupkg \
+          --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" \
+          --source https://www.nuget.org/api/v2/package
